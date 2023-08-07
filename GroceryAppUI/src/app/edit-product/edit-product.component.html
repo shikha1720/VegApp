@@ -1,0 +1,61 @@
+<div class="marginResult">
+    <h3 class="text-center">Edit Product</h3>
+    <a routerLink="/home" routerLinkActive="active">
+        Back
+    </a>
+</div>
+
+<div class="container col-md-5">
+    <div class="card">
+        <div class="card-body">
+            <div *ngIf="product">
+                <form (ngSubmit)="updateProduct()">
+                    <div *ngIf="false" class="form-group">
+                        <input type="number" [(ngModel)]="product.id" name="id" class="form-control">
+                    </div>
+                    <div *ngIf="false" class="form-group">
+                        <input type="text" [(ngModel)]="product.productCategory.id" name="product.productCategory.id"
+                            class="form-control">
+                    </div>
+                    <div *ngIf="false" class="form-group">
+                        <input type="text" [(ngModel)]="product.offer.id" name="product.offer.id" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mt-2">Title</label>
+                        <input type="text" [(ngModel)]="product.title" name="title" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mt-2">Description</label>
+                        <input type="text" [(ngModel)]="product.description" name="description" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="mt-2">Price</label>
+
+                        <input type="number" [(ngModel)]="product.price" name="price" class="form-control">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mt-2">Quantity</label>
+                        <input type="number" [(ngModel)]="product.quantity" name="quantity" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mt-2">Image URL</label>
+                        <input type="text" [(ngModel)]="product.imageName" name="imageName" class="form-control">
+                    </div>
+
+                    <div class="align-items-center d-flex">
+                        <button type="submit" class=" mt-3 d-flex btn btn-outline-primary">Update Product</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
